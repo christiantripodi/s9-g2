@@ -17,14 +17,13 @@ function App() {
           {
             fantasy.map(product => {
               return (
-                <Col>
+                <Col xs={12} md={3} key={product.asin}>
                 <Card>
-      <Card.Img variant="top" src="http://placedog.net/400" />
+      <Card.Img variant="top" src={product.image} />
       <Card.Body>
-        <Card.Title>Card Title</Card.Title>
+        <Card.Title>{product.title}</Card.Title>
         <Card.Text>
-          Some quick example text to build on the card title and make up the
-          bulk of the card's content.
+          {product.price}€
         </Card.Text>
       </Card.Body>
     </Card>
