@@ -7,6 +7,7 @@ import Container from "react-bootstrap/Container"
 import Row from "react-bootstrap/Row"
 import Col from "react-bootstrap/Col"
 import Card from "react-bootstrap/Card"
+import Button from 'react-bootstrap/Button';
 
 function App() {
   return (
@@ -19,12 +20,18 @@ function App() {
               return (
                 <Col xs={12} md={3} key={product.asin}>
                 <Card>
-      <Card.Img variant="top" src={product.image} />
+      <Card.Img variant="top" src={product.img} />
       <Card.Body>
         <Card.Title>{product.title}</Card.Title>
         <Card.Text>
           {product.price}€
         </Card.Text>
+        <Card.Text>
+          Category:{product.category}
+        </Card.Text>
+        <Button variant="success" size="sm">
+          Compra
+        </Button>
       </Card.Body>
     </Card>
                 </Col>
